@@ -82,14 +82,14 @@
 <meta name="description" content="Abstractoriginal database is represented via a small set of learned binary prototypes.   The training phase simultaneously learns a hash function which maps the data points to binary codes, and a set">
 <meta name="keywords" content="KNN,speedup">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Fast Classification with Binary Prototypes">
+<meta property="og:title" content="Fast Classification with Binary Prototypes(AISTATS2017)">
 <meta property="og:url" content="http://yoursite.com/2018/06/11/fast-classification/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
 <meta property="og:description" content="Abstractoriginal database is represented via a small set of learned binary prototypes.   The training phase simultaneously learns a hash function which maps the data points to binary codes, and a set">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T00:50:39.636Z">
+<meta property="og:updated_time" content="2018-06-11T11:52:12.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fast Classification with Binary Prototypes">
+<meta name="twitter:title" content="Fast Classification with Binary Prototypes(AISTATS2017)">
 <meta name="twitter:description" content="Abstractoriginal database is represented via a small set of learned binary prototypes.   The training phase simultaneously learns a hash function which maps the data points to binary codes, and a set">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Fast Classification with Binary Prototypes | Let's Smile</title>
+  <title>Fast Classification with Binary Prototypes(AISTATS2017) | Let's Smile</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Fast Classification with Binary Prototypes</h1>
+          <h1 class="post-title" itemprop="name headline">Fast Classification with Binary Prototypes(AISTATS2017)</h1>
         
 
         <div class="post-meta">
@@ -303,6 +303,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/top-conference/" itemprop="url" rel="index">
+                    <span itemprop="name">top conference</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -320,7 +342,7 @@
 
           
           
-             <span id="/2018/06/11/fast-classification/" class="leancloud_visitors" data-flag-title="Fast Classification with Binary Prototypes">
+             <span id="/2018/06/11/fast-classification/" class="leancloud_visitors" data-flag-title="Fast Classification with Binary Prototypes(AISTATS2017)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -356,8 +378,16 @@
 <li>The training phase simultaneously learns a hash function which maps the data points to binary codes, and a set of representative binary prototypes.</li>
 <li>In the prediction phase, first hash the query into a binary code and then do the k-NN classification using the binary prototypes as the database.</li>
 </ol>
-<p>$$ \sum _{g} $$ </p>
-<p>$$ evidence_{i}=\sum _{j}W_{ij}x_{j}+b_{i} $$</p>
+<p>two contribution:</p>
+<ol>
+<li>Compress the database into a smaller set of prototypes, then k-NN search only goes through a smaller set rather than the whole dataset.</li>
+<li>Reduce the original space to a compact binary embeding(Hamming distance between two node).</li>
+</ol>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>two main approaches to neighbor compression:</p>
+<ol>
+<li>Prototype Selection, where a subset of the database is selected as the prototype set</li>
+<li>Prototype Generation.</li>
+</ol>
 
       
     </div>
@@ -493,6 +523,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
             
               
@@ -532,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Introduction"><span class="nav-number">2.</span> <span class="nav-text">1. Introduction</span></a></li></ol></div>
             
 
           </div>
