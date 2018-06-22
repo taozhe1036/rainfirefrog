@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="KNN,compression,speed-up," />
+  <meta name="keywords" content="kernel," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Related WorkA big fraction concentrates on developing clever data structures in order to reduce the number of test time comparsions.  KD trees cover-and ball-trees hashing  Aim: reducing the size of t">
-<meta name="keywords" content="KNN,compression,speed-up">
+<meta name="description" content="LATEX SOURCE: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889\documentclass[ti">
+<meta name="keywords" content="kernel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stochastic Neighbor Compression">
-<meta property="og:url" content="http://yoursite.com/2018/06/10/knn-0/index.html">
+<meta property="og:title" content="Kernel Method">
+<meta property="og:url" content="http://yoursite.com/2018/06/22/method/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
-<meta property="og:description" content="Related WorkA big fraction concentrates on developing clever data structures in order to reduce the number of test time comparsions.  KD trees cover-and ball-trees hashing  Aim: reducing the size of t">
+<meta property="og:description" content="LATEX SOURCE: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889\documentclass[ti">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T00:10:21.140Z">
+<meta property="og:image" content="https://i.imgur.com/S0zM983.jpg">
+<meta property="og:updated_time" content="2018-06-22T09:08:59.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stochastic Neighbor Compression">
-<meta name="twitter:description" content="Related WorkA big fraction concentrates on developing clever data structures in order to reduce the number of test time comparsions.  KD trees cover-and ball-trees hashing  Aim: reducing the size of t">
+<meta name="twitter:title" content="Kernel Method">
+<meta name="twitter:description" content="LATEX SOURCE: 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889\documentclass[ti">
+<meta name="twitter:image" content="https://i.imgur.com/S0zM983.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/10/knn-0/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/22/method/"/>
 
 
 
 
 
-  <title>Stochastic Neighbor Compression | Let's Smile</title>
+  <title>Kernel Method | Let's Smile</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/knn-0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/method/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rainfirefrog">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Stochastic Neighbor Compression</h1>
+          <h1 class="post-title" itemprop="name headline">Kernel Method</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-10T21:39:21+08:00">
-                2018-06-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-22T16:57:57+08:00">
+                2018-06-22
               </time>
             
 
@@ -311,8 +313,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/10/knn-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/06/10/knn-0/" itemprop="commentsCount"></span>
+                <a href="/2018/06/22/method/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/06/22/method/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -320,7 +322,7 @@
 
           
           
-             <span id="/2018/06/10/knn-0/" class="leancloud_visitors" data-flag-title="Stochastic Neighbor Compression">
+             <span id="/2018/06/22/method/" class="leancloud_visitors" data-flag-title="Kernel Method">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -351,17 +353,8 @@
       
 
       
-        <h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1><p>A big fraction concentrates on developing clever data structures in order to reduce the number of test time comparsions.</p>
-<ol>
-<li>KD trees</li>
-<li>cover-and ball-trees</li>
-<li>hashing</li>
-</ol>
-<p>Aim: reducing the size of training data</p>
-<h2 id="Training-Set-Consistent-Sampling"><a href="#Training-Set-Consistent-Sampling" class="headerlink" title="Training Set Consistent Sampling"></a>Training Set Consistent Sampling</h2><p>Condensed Nearest Neighbors(CNN), starts by randomly selecting a single input and creating a ‘reference’ set</p>
-<h2 id="Prototype-Generation"><a href="#Prototype-Generation" class="headerlink" title="Prototype Generation"></a>Prototype Generation</h2><p>create ‘prototypes’ for the training data, which allow the inclusion of new, artificial instances in the reduced dataset via clustering.</p>
-<h2 id="Prototype-Positioning"><a href="#Prototype-Positioning" class="headerlink" title="Prototype Positioning"></a>Prototype Positioning</h2><p>learning the positions of this prototype subset. </p>
-
+        <p><img src="https://i.imgur.com/S0zM983.jpg" alt=""><br><strong>LATEX SOURCE</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[tikz,convert=false]&#123;standalone&#125;</span><br><span class="line">\usepackage[hidelinks,pdfencoding=auto]&#123;hyperref&#125;</span><br><span class="line">\usepackage&#123;dtklogos&#125;</span><br><span class="line">\usepackage[UTF8]&#123;ctex&#125;</span><br><span class="line">\usepackage[hidelinks,pdfencoding=auto]&#123;hyperref&#125;</span><br><span class="line">\usetikzlibrary&#123;mindmap,backgrounds,trees,graphs&#125;</span><br><span class="line">\tikzset&#123;</span><br><span class="line">  set angles for level/.style=&#123;level #1/.append style=&#123;sibling angle=360/\the\tikznumberofchildren&#125;&#125;,</span><br><span class="line">  level/.append style=&#123;set angles for level=#1&#125;% solution 1</span><br><span class="line">&#125;</span><br><span class="line">\newcommand*&#123;\info&#125;[4][16.3]&#123;%</span><br><span class="line">  \node [ annotation, #3, scale=0.65, text width = #1em,</span><br><span class="line">          inner sep = 2mm ] at (#2) &#123;%</span><br><span class="line">  \list&#123;$\bullet$&#125;&#123;\topsep=0pt\itemsep=0pt\parsep=0pt</span><br><span class="line">    \parskip=0pt\labelwidth=8pt\leftmargin=8pt</span><br><span class="line">    \itemindent=0pt\labelsep=2pt&#125;%</span><br><span class="line">    #4</span><br><span class="line">  \endlist</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;tikzpicture&#125;</span><br><span class="line">  \path[</span><br><span class="line">    mindmap,</span><br><span class="line">    concept color=black,</span><br><span class="line">    text=white,</span><br><span class="line">    grow cyclic,</span><br><span class="line">    nodes=concept,</span><br><span class="line">%    set angles for level/.list=&#123;1,...,4&#125;% solution 2</span><br><span class="line">  ]</span><br><span class="line">  node &#123;核函数&#125; </span><br><span class="line">    child[concept color=green!40!black] &#123;</span><br><span class="line">      node(Mapping) &#123;映射&#125;</span><br><span class="line">    &#125;  </span><br><span class="line">    child[concept color=blue] &#123; 			node(Trick)[concept] &#123;Trick&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    child[concept color=red] &#123;node(Similarity) &#123;相似度&#125; &#125;</span><br><span class="line">    child[concept color=gray]</span><br><span class="line">    &#123;node(Mercer) &#123;Mercer&apos;s theorem&#125;</span><br><span class="line">		child&#123;node(Mercer_D)&#123;Definition&#125;</span><br><span class="line">			child&#123;node(LP_D) &#123;$L^p$ spaces&#125;&#125;		</span><br><span class="line">		&#125;		</span><br><span class="line">		child&#123;node(Condition)&#123;Mercer&apos;s condition&#125;&#125;</span><br><span class="line">		child&#123;node(Trace)&#123;Trace&#125;&#125;				       &#125;;</span><br><span class="line">    </span><br><span class="line">\begin&#123;pgfonlayer&#125;&#123;background&#125;</span><br><span class="line">    \draw [rounded corners,-&gt;, thick, pink]</span><br><span class="line">      (Mapping) edge (Trick) </span><br><span class="line">node[align=center,yshift=-8em, xshift=1em, pos=0.8, rotate=0, color=black]&#123;从映射后的内积</span><br><span class="line">\\简化到直接Trick&#125;;</span><br><span class="line">\end&#123;pgfonlayer&#125;</span><br><span class="line">      </span><br><span class="line">    \info&#123;Mapping.east&#125;&#123;left,xshift=-5em&#125;&#123;\large&#123;      </span><br><span class="line"> \item 映射是为了把难分的数据集扩展到高维可分的空间</span><br><span class="line"> \item $\phi(\mathbf&#123;x&#125;): \mathcal&#123;R&#125;^d \to \mathcal&#123;R&#125;^D$ 并且 $D &gt; d$ </span><br><span class="line">      &#125; </span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">	\info&#123;Trick.east&#125;&#123;right, xshift=0.1em&#125;</span><br><span class="line">	&#123;\large&#123;</span><br><span class="line">		\item 存在一步内积计算,需要计算映射到高维上的特征内积$\phi(\mathbf&#123;x&#125;_i)&apos;\phi(\mathbf&#123;x&#125;_j)$. 找到一个核函数$\mathbf&#123;K&#125;(\mathbf&#123;x&#125;_i, \mathbf&#123;x&#125;_j)=\phi(\mathbf&#123;x&#125;_i)&apos;\phi(\mathbf&#123;x&#125;_j)$, 其实就不需要计算$\phi(\mathbf&#123;x&#125;)$, 直接$\mathcal&#123;K&#125;$</span><br><span class="line">	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	\info&#123;Similarity.east&#125;&#123;right, xshift=0.1em&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		\large&#123;</span><br><span class="line">			\item Defintion: 定义了两个目标之间相识度的实值函数		$f(x, y): \mathcal&#123;R&#125;^d \times \mathcal&#123;R&#125;^d \to \mathcal&#123;R&#125;$		</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	\info&#123;Mercer_D.north&#125;&#123;above right, yshift = 3em&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		\item Mercer&apos;s theorem is a representation of a symmetric positive-definite function on a square as a sum of a convergent sequence of product functions.</span><br><span class="line">		\item Symmetric: $\mathcal&#123;K&#125;(x, s) = \mathcal&#123;K&#125;(s, x)$</span><br><span class="line">		\item Positive semidefinite: $\sum_&#123;i=1&#125;^n \sum_&#123;j=1&#125;^n K(x_i, x_j)c_ic_j \geq 0$</span><br><span class="line">		\item A linear operator on functions: $[T_\mathcal&#123;K&#125;\varphi](x) = \int_a^b \mathcal&#123;K&#125;(x, s)\varphi(s)ds.$</span><br><span class="line">		\item \textbf&#123;Theorem&#125; $\mathcal&#123;K&#125;(s, t) = \sum_&#123;j=1&#125;^&#123;\infty&#125; \lambda_j e_j(s) e_j(t)$</span><br><span class="line">	\item $\lambda_i e_i(t) =[T_\mathcal&#123;K&#125;e_i](t) = \int_a^b \mathcal&#123;K&#125;(t, s)e_i(s)ds.$	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	\info&#123;Condition.west&#125;&#123;left, xshift = 2em&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		\item a real-valued function $\mathcal&#123;K&#125;(x, y)$ is said to fulfill Mercer&apos;s condition if for all square-integrable functions $g(x)$ one has\\$\int\int g(x)\mathcal&#123;K&#125;(x, y)g(y)dxdy \geq 0$	</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	  </span><br><span class="line">\end&#123;tikzpicture&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -378,11 +371,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/KNN/" rel="tag"># KNN</a>
-          
-            <a href="/tags/compression/" rel="tag"># compression</a>
-          
-            <a href="/tags/speed-up/" rel="tag"># speed-up</a>
+            <a href="/tags/kernel/" rel="tag"># kernel</a>
           
         </div>
       
@@ -395,15 +384,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/11/专利/" rel="next" title="专利">
+                <i class="fa fa-chevron-left"></i> 专利
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/11/fast-classification/" rel="prev" title="Fast Classification with Binary Prototypes    (AISTATS2017)">
-                Fast Classification with Binary Prototypes    (AISTATS2017) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -462,17 +451,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,22 +516,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Related-Work"><span class="nav-number">1.</span> <span class="nav-text">Related Work</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Training-Set-Consistent-Sampling"><span class="nav-number">1.1.</span> <span class="nav-text">Training Set Consistent Sampling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prototype-Generation"><span class="nav-number">1.2.</span> <span class="nav-text">Prototype Generation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prototype-Positioning"><span class="nav-number">1.3.</span> <span class="nav-text">Prototype Positioning</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
