@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="##准备工作## 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
+<meta name="description" content="#准备工作 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
 <meta name="keywords" content="latex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在MarkdownPad2中使用latex">
 <meta property="og:url" content="http://yoursite.com/2018/06/23/Markdown-18-6-23/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
-<meta property="og:description" content="##准备工作## 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
+<meta property="og:description" content="#准备工作 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-23T11:04:26.717Z">
+<meta property="og:updated_time" content="2018-06-23T11:45:08.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在MarkdownPad2中使用latex">
-<meta name="twitter:description" content="##准备工作## 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
+<meta name="twitter:description" content="#准备工作 首先在Tools-Options-Advanced-HTML Header Editor中添加 123456789101112131415&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;  MathJax.Hub.Config(&amp;#123;    extensions: [&amp;quot;tex2jax.js&amp;quot;],">
 
 
 
@@ -373,11 +373,11 @@
       
 
       
-        <p>##准备工作##<br>
+        <p>#准备工作<br>
 首先在Tools-Options-Advanced-HTML Header Editor中添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;</span><br><span class="line">  MathJax.Hub.Config(&#123;</span><br><span class="line">    extensions: [&quot;tex2jax.js&quot;],</span><br><span class="line">    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],</span><br><span class="line">    tex2jax: &#123;</span><br><span class="line">      inlineMath: [ [&apos;$&apos;,&apos;$&apos;], [&quot;\\(&quot;,&quot;\\)&quot;] ],</span><br><span class="line">      displayMath: [ [&apos;$$&apos;,&apos;$$&apos;], [&quot;\\[&quot;,&quot;\\]&quot;] ],</span><br><span class="line">      processEscapes: true</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;HTML-CSS&quot;: &#123; availableFonts: [&quot;TeX&quot;] &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;</span><br><span class="line">  src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p>记得要在主题的_config.yml中配置mathjax的enable为true</p>
-<p>##使用方法##<br>
+<p>#使用方法<br>
 上面添加的头中已经给出了一些常用的使用方法。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 用[&quot;\\(&quot;,&quot;\\)&quot;]替换[&apos;$&apos;,&apos;$&apos;]</span><br><span class="line">2. 用[&quot;\\[&quot;,&quot;\\]&quot;]替换[&apos;$$&apos;,&apos;$$&apos;]</span><br><span class="line"></span><br><span class="line">还有一些使用方法比如:</span><br><span class="line">下划线的替换 _: \_ </span><br><span class="line"></span><br><span class="line">括号的替换 &#123;&#125;: \\&#123; \\&#125; </span><br><span class="line"></span><br><span class="line">矩阵的表示 matrix: \\begin&#123;bmatrix&#125; 1 &amp; 0 \\\\ 0 &amp; 1 \\end&#123;bmatrix&#125;</span><br></pre></td></tr></table></figure>
 
@@ -410,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/23/FOAM-18-6-23/" rel="next" title="Kernel-based OAM Algorithm with Random Fourier Feature">
-                <i class="fa fa-chevron-left"></i> Kernel-based OAM Algorithm with Random Fourier Feature
+              <a href="/2018/06/23/FOAM-18-6-23/" rel="next" title="<sub>Kernel-based OAM Algorithm with Random Fourier Feature</sub>">
+                <i class="fa fa-chevron-left"></i> <sub>Kernel-based OAM Algorithm with Random Fourier Feature</sub>
               </a>
             
           </div>
@@ -519,7 +519,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -529,6 +529,16 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/kan-kan-28" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
           
 
           
