@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^Tx), \cdots, \cos(u_m^{\top}x), s">
+<meta name="description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^{T}x), \cdots, \cos(u_m^{\top} x)">
 <meta name="keywords" content="kernel,fourier">
 <meta property="og:type" content="article">
 <meta property="og:title" content="&lt;sub&gt;Kernel-based OAM Algorithm with Random Fourier Feature&lt;&#x2F;sub&gt;">
 <meta property="og:url" content="http://yoursite.com/2018/06/23/FOAM-18-6-23/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
-<meta property="og:description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^Tx), \cdots, \cos(u_m^{\top}x), s">
+<meta property="og:description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^{T}x), \cdots, \cos(u_m^{\top} x)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-30T08:28:32.723Z">
+<meta property="og:updated_time" content="2018-06-30T08:46:14.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="&lt;sub&gt;Kernel-based OAM Algorithm with Random Fourier Feature&lt;&#x2F;sub&gt;">
-<meta name="twitter:description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^Tx), \cdots, \cos(u_m^{\top}x), s">
+<meta name="twitter:description" content="Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\) \[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^{T}x), \cdots, \cos(u_m^{\top} x)">
 
 
 
@@ -374,11 +374,12 @@
 
       
         <p>Draw \(m\) i.i.d random Fourier components: \(u_{1},…,u_{m}\) sampled from distribution \(p(u)=\mathcal{N}(0, \sigma^{-2}I)\)</p>
-<p>\[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^Tx), \cdots, \cos(u_m^{\top}x), sin(u_m<sup>Tx))</sup>{\top}\]</p>
+<p>\[z_t(x_t) = (\cos(u_1^{\top}x), sin(u_1^{T}x), \cdots, \cos(u_m^{\top} x), \sin(u_m^{T} x))^{\top}\]</p>
 <p><strong>UpdateClassifier</strong> by mini-batch OGD</p>
 <p>Input: \(w_t, (z_t, y_t), B, \eta \)</p>
 <p>找出所有产生损失的映射后的样本。</p>
-<p>这里使用Hinge损失。 \[ \ell(w<sup>{\top}(z_i</sup>+ - z_j^-) ) = \max\{ 0, 1 - w<sup>{\top}(z_i</sup>+ - z_j^-) \} \]</p>
+<p>这里使用Hinge损失。<br>
+\[\ell(w^{\top} (z_i^{+} - z_j^{-}) ) = \max \{ 0, 1 - w^{\top} (z_i^+ - z_j^-) \}\]</p>
 <hr>
 <p>原始的Hinge损失应用在maximum-margin分类任务中。 基于实际标签为\(t=\pm 1\)和分类器得到的原始值\(y\), 对应于预测值\(y\)的Hinge损失为：<br>
 \[\ell(y) = \max(0, 1- t \cdot y)\]</p>
