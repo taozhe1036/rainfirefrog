@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #49961a;
+  background: #ff6eb3;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3003,4 +3003,21 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("/images/Samourai.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  min-height: 500px;
+}
+.content {
+  border-radius: 10px;
+  margin-top: 60px;
+  background: rgba(255,255,255,0.15) none repeat scroll !important;
 }
