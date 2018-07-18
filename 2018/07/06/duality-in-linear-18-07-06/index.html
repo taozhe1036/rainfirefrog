@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hello" />
+  <meta name="keywords" content="convex," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Why so serious?">
+<meta name="description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
+<meta name="keywords" content="convex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="duality_in_linear_18_07_06">
+<meta property="og:title" content="Duality in Linear Programs">
 <meta property="og:url" content="http://yoursite.com/2018/07/06/duality-in-linear-18-07-06/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
-<meta property="og:description" content="Why so serious?">
+<meta property="og:description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-06T08:06:35.507Z">
+<meta property="og:updated_time" content="2018-07-08T08:04:46.643Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="duality_in_linear_18_07_06">
-<meta name="twitter:description" content="Why so serious?">
+<meta name="twitter:title" content="Duality in Linear Programs">
+<meta name="twitter:description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <title>duality_in_linear_18_07_06 | Let's Smile</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Duality in Linear Programs | Let's Smile</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">duality_in_linear_18_07_06</h1>
+          <h1 class="post-title" itemprop="name headline">Duality in Linear Programs</h1>
         
 
         <div class="post-meta">
@@ -302,6 +303,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Convex-Optimization/" itemprop="url" rel="index">
+                    <span itemprop="name">Convex Optimization</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Convex-Optimization/Lecture-10/" itemprop="url" rel="index">
+                    <span itemprop="name">Lecture 10</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -319,7 +353,7 @@
 
           
           
-             <span id="/2018/07/06/duality-in-linear-18-07-06/" class="leancloud_visitors" data-flag-title="duality_in_linear_18_07_06">
+             <span id="/2018/07/06/duality-in-linear-18-07-06/" class="leancloud_visitors" data-flag-title="Duality in Linear Programs">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -350,7 +384,17 @@
       
 
       
-        
+        <p>SOLAM中用到了duality，了解一下dual的背景知识。</p>
+<a id="more"></a>
+<h1 id="回顾"><a class="markdownIt-Anchor" href="#回顾"></a> 回顾</h1>
+<p>首先回顾一下proximal gradient descent。（这一部分也忘了）<br>
+\[ \min \limits_{x} g(x) +  h(x) \tag{1} \],<br>
+其中$ g, h $都是凸函数， $ g $可微， $ h $很简单，那么：<br>
+\[ prox_{t} = \arg\min\limits_{x} \frac{1}{2t} | x - z |_{2}^{2} + h(x)  \tag{2} \]<br>
+<font color="red"> Proximal gradient descent </font>:  let $ x^{(0)} \in \mathbf{R}^n $, repeat:<br>
+\[ x^{(k)} = prox_{t_k} (x^{(k-1)} - t_k \nabla g(x^{(k-1)})), k=1, 2, 3, \cdots \tag{3}\]</p>
+<p>视频链接：<a href="https://www.youtube.com/watch?v=OQncSb3PIWA&amp;edit=vd" target="_blank" rel="noopener">duality</a></p>
+
       
     </div>
     
@@ -364,6 +408,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/convex/" rel="tag"># convex</a>
+          
+        </div>
       
 
       
@@ -383,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/08/subgradient-18-7-8/" rel="prev" title="Subgradient">
+                Subgradient <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -441,8 +495,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -461,7 +524,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -472,7 +535,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -515,6 +578,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text"> 回顾</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
