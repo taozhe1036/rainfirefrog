@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
+<meta name="description" content="SOLAM中用到了duality，了解一下dual的背景知识。 add: Lagrangian dual(2018_7_21)">
 <meta name="keywords" content="convex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Duality in Linear Programs">
 <meta property="og:url" content="http://yoursite.com/2018/07/06/duality-in-linear-18-07-06/index.html">
 <meta property="og:site_name" content="Let&#39;s Smile">
-<meta property="og:description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
+<meta property="og:description" content="SOLAM中用到了duality，了解一下dual的背景知识。 add: Lagrangian dual(2018_7_21)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-08T08:04:46.643Z">
+<meta property="og:image" content="http://yoursite.com/images/18_7_20/problem_setting.png">
+<meta property="og:image" content="http://yoursite.com/images/18_7_20/problem.png">
+<meta property="og:image" content="http://yoursite.com/images/18_7_20/dual_problem.png">
+<meta property="og:image" content="http://yoursite.com/images/18_7_20/dual.png">
+<meta property="og:updated_time" content="2018-07-22T01:20:38.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Duality in Linear Programs">
-<meta name="twitter:description" content="SOLAM中用到了duality，了解一下dual的背景知识。">
+<meta name="twitter:description" content="SOLAM中用到了duality，了解一下dual的背景知识。 add: Lagrangian dual(2018_7_21)">
+<meta name="twitter:image" content="http://yoursite.com/images/18_7_20/problem_setting.png">
 
 
 
@@ -326,8 +331,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Convex-Optimization/Lecture-10/" itemprop="url" rel="index">
-                    <span itemprop="name">Lecture 10</span>
+                  <a href="/categories/Convex-Optimization/dual/" itemprop="url" rel="index">
+                    <span itemprop="name">dual</span>
                   </a>
                 </span>
 
@@ -384,7 +389,8 @@
       
 
       
-        <p>SOLAM中用到了duality，了解一下dual的背景知识。</p>
+        <p>SOLAM中用到了duality，了解一下dual的背景知识。<br>
+add: Lagrangian dual(2018_7_21)</p>
 <a id="more"></a>
 <h1 id="回顾"><a class="markdownIt-Anchor" href="#回顾"></a> 回顾</h1>
 <p>首先回顾一下proximal gradient descent。（这一部分也忘了）<br>
@@ -393,7 +399,50 @@
 \[ prox_{t} = \arg\min\limits_{x} \frac{1}{2t} | x - z |_{2}^{2} + h(x)  \tag{2} \]<br>
 <font color="red"> Proximal gradient descent </font>:  let $ x^{(0)} \in \mathbf{R}^n $, repeat:<br>
 \[ x^{(k)} = prox_{t_k} (x^{(k-1)} - t_k \nabla g(x^{(k-1)})), k=1, 2, 3, \cdots \tag{3}\]</p>
-<p>视频链接：<a href="https://www.youtube.com/watch?v=OQncSb3PIWA&amp;edit=vd" target="_blank" rel="noopener">duality</a></p>
+<h1 id="max-flow-and-min-cut-problems"><a class="markdownIt-Anchor" href="#max-flow-and-min-cut-problems"></a> Max Flow and Min Cut Problems</h1>
+<ol>
+<li>Flow into the node = flow coming out of the node.(except for the start and end)</li>
+<li>The problem  is equvailent to<br>
+<img src="/images/18_7_20/problem_setting.png" alt="problem setting"></li>
+<li>The goal:<br>
+<img src="/images/18_7_20/problem.png" alt="problem"></li>
+<li>Equvailent transformation:<br>
+原本目标是要最大化从起点开始能发出的最大流量。<br>
+现在考虑所有起点到终点间的路径，那么最大化所有此类路径上的流量等价于原本的目标。<br>
+限制条件在原目标是中间的边上的流量有一个上界和下界，等价转换后的目标是在路径上的同一条边上的流量和要满足限制条件中的同一上下界。</li>
+</ol>
+\begin{align*}
+ maximize & \sum_{p \in P} x_p \\
+ subject \,\, to & \sum_{p \in P:(i,j) \in p} x_p \leq c_{ij} \,\, \forall (i, j) \in E\\
+& x_p \geq 0 \,\,\,\,\,\, \forall p \in P
+\end{align*} 
+
+<p>要证明原目标和变形后的目标一致。</p>
+<blockquote>
+<p>原目标中的可行解一定也是变形后目标的解（等代价）。 根据流分解定理可得。<br>
+如果 $ \{x_p \}_{p \in P} $是变形问题解，则存在一个同等代价的原问题解。</p>
+</blockquote>
+<p>其对偶问题为：<br>
+<img src="/images/18_7_20/dual_problem.png" alt="dual_problem"><br>
+该对偶问题可以看成minimum cut问题的放松LP问题。<br>
+可以证明该对偶问题最小值等价于minimum cut的容量。</p>
+<p><strong>Lemma 4</strong> Given any feasible solution $ \{ y_{u, v} \}_{ (u, v) \in E} $ to dual problem, it is possible to find a cut A such that<br>
+\[ capacity(A) \leq \sum_{u, v} c(u,v) y_{u,v} \]</p>
+<p>最终可以等价为：<br>
+<img src="/images/18_7_20/dual.png" alt="dual"></p>
+<h1 id="lagranigan"><a class="markdownIt-Anchor" href="#lagranigan"></a> Lagranigan</h1>
+\begin{align*}
+\min f(x) s.t 条件 \\
+\min f(x) \geq f(x) + \lambda * 条件
+\end{align*} 
+
+<p><strong>weak duality</strong>: $ f^* \geq g^* $(even if the primal is nonconvex)<br>
+but the dual is always convex. 那为什么都不转化成dual问题来做，因为要转化为g有时候非常困难。</p>
+<p><strong>strong duality</strong>:<br>
+<strong>Slater condition</strong>: If the primal is a convex problem, and there exists at least one strictly feasible $ x \in \mathbf{R}^n $ then strong duality holds</p>
+<p>视频链接：<a href="https://www.youtube.com/watch?v=OQncSb3PIWA&amp;edit=vd" target="_blank" rel="noopener">duality</a><br>
+notes链接： <a href="http://www.stat.cmu.edu/~ryantibs/convexopt/scribes/dual-gen-scribed.pdf" target="_blank" rel="noopener">Lagranign</a><br>
+<a href="http://theory.stanford.edu/~trevisan/cs261/lecture15.pdf" target="_blank" rel="noopener">max flow, low cut</a></p>
 
       
     </div>
@@ -524,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -546,7 +595,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -588,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text"> 回顾</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text"> 回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#max-flow-and-min-cut-problems"><span class="nav-number">2.</span> <span class="nav-text"> Max Flow and Min Cut Problems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lagranigan"><span class="nav-number">3.</span> <span class="nav-text"> Lagranigan</span></a></li></ol></div>
             
 
           </div>
