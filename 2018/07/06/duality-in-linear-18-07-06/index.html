@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://yoursite.com/images/18_7_20/problem.png">
 <meta property="og:image" content="http://yoursite.com/images/18_7_20/dual_problem.png">
 <meta property="og:image" content="http://yoursite.com/images/18_7_20/dual.png">
-<meta property="og:updated_time" content="2018-07-22T01:20:38.664Z">
+<meta property="og:updated_time" content="2018-07-23T01:53:41.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Duality in Linear Programs">
 <meta name="twitter:description" content="SOLAM中用到了duality，了解一下dual的背景知识。 add: Lagrangian dual(2018_7_21)">
@@ -406,7 +406,7 @@ add: Lagrangian dual(2018_7_21)</p>
 <img src="/images/18_7_20/problem_setting.png" alt="problem setting"></li>
 <li>The goal:<br>
 <img src="/images/18_7_20/problem.png" alt="problem"></li>
-<li>Equvailent transformation:<br>
+<li>Equivalent transformation:<br>
 原本目标是要最大化从起点开始能发出的最大流量。<br>
 现在考虑所有起点到终点间的路径，那么最大化所有此类路径上的流量等价于原本的目标。<br>
 限制条件在原目标是中间的边上的流量有一个上界和下界，等价转换后的目标是在路径上的同一条边上的流量和要满足限制条件中的同一上下界。</li>
@@ -439,7 +439,9 @@ add: Lagrangian dual(2018_7_21)</p>
 <p><strong>weak duality</strong>: $ f^* \geq g^* $(even if the primal is nonconvex)<br>
 but the dual is always convex. 那为什么都不转化成dual问题来做，因为要转化为g有时候非常困难。</p>
 <p><strong>strong duality</strong>:<br>
-<strong>Slater condition</strong>: If the primal is a convex problem, and there exists at least one strictly feasible $ x \in \mathbf{R}^n $ then strong duality holds</p>
+<strong>Slater condition</strong>: If the primal is a convex problem, and there exists at least one strictly feasible $ x \in \mathbf{R}^n $ then strong duality holds.</p>
+<h1 id="conditions-for-strong-duality"><a class="markdownIt-Anchor" href="#conditions-for-strong-duality"></a> Conditions for Strong Duality:</h1>
+<p>s</p>
 <p>视频链接：<a href="https://www.youtube.com/watch?v=OQncSb3PIWA&amp;edit=vd" target="_blank" rel="noopener">duality</a><br>
 notes链接： <a href="http://www.stat.cmu.edu/~ryantibs/convexopt/scribes/dual-gen-scribed.pdf" target="_blank" rel="noopener">Lagranign</a><br>
 <a href="http://theory.stanford.edu/~trevisan/cs261/lecture15.pdf" target="_blank" rel="noopener">max flow, low cut</a></p>
@@ -637,7 +639,7 @@ notes链接： <a href="http://www.stat.cmu.edu/~ryantibs/convexopt/scribes/dual
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text"> 回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#max-flow-and-min-cut-problems"><span class="nav-number">2.</span> <span class="nav-text"> Max Flow and Min Cut Problems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lagranigan"><span class="nav-number">3.</span> <span class="nav-text"> Lagranigan</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">1.</span> <span class="nav-text"> 回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#max-flow-and-min-cut-problems"><span class="nav-number">2.</span> <span class="nav-text"> Max Flow and Min Cut Problems</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lagranigan"><span class="nav-number">3.</span> <span class="nav-text"> Lagranigan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conditions-for-strong-duality"><span class="nav-number">4.</span> <span class="nav-text"> Conditions for Strong Duality:</span></a></li></ol></div>
             
 
           </div>
